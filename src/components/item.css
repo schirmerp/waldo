@@ -1,0 +1,44 @@
+
+.info{
+    visibility: hidden;
+}
+.infoactive{
+    visibility: visible;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: white;
+    border: 5px solid black;
+    height: 100px;
+    width: 500px;
+    border-radius: 20%;
+    background-color: white;
+    margin: 0 0 0 -20%;
+    text-align: center;
+    font-size: xx-large;
+    color:darkslategrey;
+    animation: hide 1s linear 3s 1 forwards;
+}
+
+#no > img{
+    background-color: red;
+    opacity: .4; 
+    filter: invert();
+    
+}
+
+@keyframes hide {
+    to {
+        opacity: 0;
+    }
+}
+.stopwatch{
+    position: absolute;
+    top: 0;
+    left: 20px; 
+
+}
+.numbers{
+    background-color: rgb(233, 243, 223);
+}

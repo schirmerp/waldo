@@ -1,0 +1,53 @@
+.board-div{
+    position: relative;
+}
+.rick{
+    position: absolute;
+    top: 608px;
+    left: 796px;
+}
+.ballon{
+    position: absolute;
+    top: 705px;
+    left: 398px;
+}
+.seeks{
+    position: absolute;
+    top: 6px;
+    left: 901px;
+}
+.duck{
+    position: absolute;
+    top: 61px;
+    left: 790px;
+}
+.morty{
+    position: absolute;
+    top: 359px;
+    left: 982px;
+}
+.flamingo{
+    position: absolute;
+    top: 65px;
+    left: 1489px;
+}
+.pencil{
+    position: absolute;
+    top: 338px;
+    left: 804px;
+}
+.tinycowboy{
+    position: absolute;
+    top: 369px;
+    left: 1665px;
+}
+.summer{
+    position: absolute;
+    top: 846px;
+    left: 1331px;
+}
+.stopwatch{
+    position: absolute;
+    top: 0;
+    left: 50%;
+}
