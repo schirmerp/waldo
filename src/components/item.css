@@ -42,3 +42,11 @@
 .numbers{
     background-color: rgb(233, 243, 223);
 }
+.board > img{
+    filter: none !important;
+    opacity: 1 !important;
+    
+}
+.board > .infoactive{
+    visibility: hidden !important;
+}

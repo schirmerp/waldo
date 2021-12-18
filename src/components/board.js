@@ -11,11 +11,12 @@ import morty from "/src/images/waldo_img/morty.png"
 import pencil from "/src/images/waldo_img/pencil.png"
 import summer from "/src/images/waldo_img/summer.png"
 import tinycowboy from "/src/images/waldo_img/tinycowboy.png"
+import style from "/src//components/item.css"
 
 export default function Board(){
     return(
         <div className="board-div">
-            <Item className="board" src={group}/>
+            <Item className={style.board} src={group}/>
             <Item className={styles.rick} src={rick} onClick={()=>console.log("got rick")} alt={"Rick"}/>
             <Item className={styles.ballon} src={ballon} onClick={()=>console.log("got Ballon")} alt={"Ballon"}/>
             <Item className={styles.seeks} src={seeks} onClick={()=>console.log("got messeks")} alt={"Mr. Meseeks"}/>

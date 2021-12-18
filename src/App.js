@@ -25,7 +25,7 @@ if(checkinfo === true){
         <div className='App'>
             <Score/>
             <Board/>
-            <Stopwatch className={styles.stopwatch}/>
+            <Stopwatch/>
         </div>
     )
 }
