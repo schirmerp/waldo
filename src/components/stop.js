@@ -18,8 +18,8 @@ const Stopwatch = () => {
       return () => clearInterval(interval);
     }, [running]);
     return (
-      <div className={styles.stopwatch}>
-          <div className="buttons">
+      <div id="stopwatch"className={styles.stopwatch}>
+          <div className={running ? "buttonsOn" : "buttonsOff"}>
           <button onClick={() => setRunning(true)}>Start</button>
           <button onClick={() => setRunning(false)}>Stop</button>
           <button onClick={() => setTime(0)}>Reset</button>       

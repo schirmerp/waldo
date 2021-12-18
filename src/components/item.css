@@ -25,7 +25,7 @@
     background-color: red;
     opacity: .4; 
     filter: invert();
-    
+    border-radius: 30%;
 }
 
 @keyframes hide {
@@ -49,4 +49,7 @@
 }
 .board > .infoactive{
     visibility: hidden !important;
+}
+.tinycowboy > * {
+    left: -520px !important;
 }

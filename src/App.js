@@ -9,21 +9,21 @@ import Stopwatch from './components/stop';
 
 
 
+
+
 function App(){
-//const [CN, setCN] = useState("styles.info")
-/*
-const checkinfo = ()=>{
-    //nneed to write something to test state here
-}
-if(checkinfo === true){
-    setCN("styles.infoactive")
-}else{
-    setCN("styles.info")
-}
-*/
+    const [game, setGame] = useState(false)
+    //const check = document.getElementsByClassName('stFwDofkgRwKTCBMWRnU')
+    const check = document.getElementById('stopwatch')
+
+    if(check){
+        console.log(check)
+        console.log('yes')
+
+    }
+    console.log('test')
     return(
         <div className='App'>
-            <Score/>
             <Board/>
             <Stopwatch/>
         </div>

@@ -27,36 +27,7 @@ export default class Item extends Component {
 
     }
 
-    /*
-    const [isFound, setIsFound] = useState(false)
-    const [cn, setCn] = useState('info ' + styles.info)
 
-    const handleClick = () =>{
-        
-            
-            setCn(styles.info-active + " info-active")
-        
-        }
-        
-    
-
-    
-    useEffect(()=>{
-        const e = document.getElementById('info')
-        e.addEventListener('click', handleClick)
-
-        return() => {
-            e.removeEventListener('click', handleClick)
-        }
-    }, []) */
-    /*
-    useEffect(() =>{
-        handlecn = () => {
-            if(Item.isFound === true){
-                setCn(prevState => prevState + " info-active")            
-            }
-        }
-    }) */
     render() {
         const {className, src, alt} = this.props
         const {isFound, myName, isActive} = this.state
