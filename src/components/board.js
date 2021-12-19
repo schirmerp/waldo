@@ -14,6 +14,12 @@ import tinycowboy from "/src/images/waldo_img/tinycowboy.png"
 import style from "/src//components/item.css"
 
 export default function Board(){
+    const check = document.getElementById('stopwatch')
+    
+    if(check){
+        console.log(check)
+        console.log('yess')
+    }  
     return(
         <div className="board-div">
             <Item className={style.board} src={group}/>

@@ -17,6 +17,11 @@ const Stopwatch = () => {
       }
       return () => clearInterval(interval);
     }, [running]);
+
+    const check = document.getElementById('stopwatch')
+    if(check)[
+      console.log('stop.js' + check)
+    ]
     return (
       <div id="stopwatch"className={styles.stopwatch}>
           <div className={running ? "buttonsOn" : "buttonsOff"}>

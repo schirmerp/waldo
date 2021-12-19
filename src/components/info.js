@@ -8,4 +8,3 @@ export default function PopInfo(props){
     )
 }
 
-/* write pop cards for each item. include them in a item build   */

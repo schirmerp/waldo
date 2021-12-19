@@ -12,16 +12,27 @@ import Stopwatch from './components/stop';
 
 
 function App(){
-    const [game, setGame] = useState(false)
-    //const check = document.getElementsByClassName('stFwDofkgRwKTCBMWRnU')
-    const check = document.getElementById('stopwatch')
-
+    
+    const check = document.getElementsByClassName('stFwDofkgRwKTCBMWRnU')
+    //const check = document.getElementById('stopwatch')
+    //const e = (i)=> {return document.evaluate(i, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;}
+    
+    const boff = document.getElementsByClassName('buttonsOff')
+    const bon = document.getElementsByClassName('buttonsOn')
+    if(boff){
+        console.log('boff')
+    }
+    if(bon){
+        console.log(bon)
+    }
     if(check){
         console.log(check)
-        console.log('yes')
-
+        console.log('yes-app')
+        
     }
-    console.log('test')
+    
+    
+    console.log(document.getElementsByClassName('deck').parentElement)
     return(
         <div className='App'>
             <Board/>

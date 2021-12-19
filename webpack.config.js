@@ -2,7 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
-  //devtool: 'inline-source-map',
+  
   entry: path.resolve(__dirname, './src/index.js'),
   module: {
     rules: [
@@ -30,6 +30,11 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.js$/,
+        enforce: 'pre',
+        use: ['source-map-loader'],
+      },
     ],
   },
   resolve: {
@@ -40,8 +45,9 @@ module.exports = {
     filename: 'bundle.js',
   },
   plugins: [new webpack.HotModuleReplacementPlugin()],
+  
   devServer: {
     contentBase: path.resolve(__dirname, './dist'),
-    hot: true,
+ 
   },
 };

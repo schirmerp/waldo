@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { render } from "react-dom";
 import styles from "./item.css"
 import PopInfo from "./info";
 
@@ -26,6 +25,8 @@ export default class Item extends Component {
         console.log(e.target.alt)
 
     }
+
+    
 
 
     render() {
