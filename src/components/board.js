@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import group from "/src/images/waldo_img/wheres_rick.png"
 import Item from "./item";
 import rick from "/src/images/waldo_img/rick.png"
@@ -12,10 +12,29 @@ import pencil from "/src/images/waldo_img/pencil.png"
 import summer from "/src/images/waldo_img/summer.png"
 import tinycowboy from "/src/images/waldo_img/tinycowboy.png"
 import style from "/src//components/item.css"
+import { imgList } from "./data"
 
 export default function Board(){
+    const data = imgList.map(i=> i.name)
+    console.log(data)
+    const [pickList, setPickList] = useState(data)
+
+
+    useEffect(()=>{
+        //add body event listener for clicks and modify picklist from event data
+    }
+
+
+
+    function handleClick (){
+        setPickList(!pickList.isSelected)
+        console.log(pickList)
+    }
+
     const check = document.getElementById('stopwatch')
     
+    
+
     if(check){
         console.log(check)
         console.log('yess')
@@ -23,7 +42,7 @@ export default function Board(){
     return(
         <div className="board-div">
             <Item className={style.board} src={group}/>
-            <Item className={styles.rick} src={rick} onClick={()=>console.log("got rick")} alt={"Rick"}/>
+            <Item className={styles.rick} src={rick} onClick={()=>handleClick} alt={"Rick"}/>
             <Item className={styles.ballon} src={ballon} onClick={()=>console.log("got Ballon")} alt={"Ballon"}/>
             <Item className={styles.seeks} src={seeks} onClick={()=>console.log("got messeks")} alt={"Mr. Meseeks"}/>
             <Item className={styles.duck} src={duck} onClick={()=>console.log("got duck")} alt={"Duck"}/>

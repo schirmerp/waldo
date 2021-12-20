@@ -20,13 +20,13 @@ function App(){
     const boff = document.getElementsByClassName('buttonsOff')
     const bon = document.getElementsByClassName('buttonsOn')
     if(boff){
-        console.log('boff')
+        console.log('off')
     }
     if(bon){
-        console.log(bon)
+        console.log('on')
     }
     if(check){
-        console.log(check)
+        console.log(check.firstChild)
         console.log('yes-app')
         
     }
