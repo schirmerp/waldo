@@ -51,7 +51,7 @@ export default function Board(){
             <Item className={styles.pencil} src={pencil} onClick={handleClick} alt={"Pencil"}/>
             <Item className={styles.summer} src={summer} onClick={handleClick} alt={"Summer"}/>
             <Item className={styles.tinycowboy} src={tinycowboy} onClick={handleClick} alt={"Tinycowboy"}/>
-            <Expire delay="500000" key={key}>
+            <Expire delay="5000" key={key}>
                 <FoundInfo className={(key === 0) ? styles.none : styles.beenFound} info="You already found this shit!!!!" size="col-md-10" />
             </Expire>
         </div>
