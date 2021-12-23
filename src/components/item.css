@@ -8,7 +8,6 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    color: white;
     border: 5px solid black;
     height: 100px;
     width: 500px;
@@ -17,8 +16,11 @@
     margin: 0 0 0 -20%;
     text-align: center;
     font-size: xx-large;
-    color:darkslategrey;
+    color:rgb(19, 20, 20);
     animation: hide 1s linear 3s 1 forwards;
+    background-image: repeating-conic-gradient(rgb(255, 148, 148) 10%, rgb(248, 248, 144) 20%);
+    vertical-align: middle;
+    line-height: 100px;
 }
 
 #no > img{
@@ -52,4 +54,16 @@
 }
 .tinycowboy > * {
     left: -520px !important;
+}
+.notFound{
+    visibility: hidden;
+}
+.found{
+    visibility: visible;
+    position: absolute;
+    background-color: wheat;
+    width: 500px;
+    height: 250px;
+    border: 5px solid black;
+    animation: hide 1s linear 3s 1 forwards;
 }

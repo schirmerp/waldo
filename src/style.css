@@ -57,3 +57,35 @@
 .flamingo > * {
     left: -520px !important;
 }
+.foundno > *{
+    visibility: hidden;
+}
+.foundYes> *{
+    visibility: visible;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5em;
+    height: 2em;
+    z-index: 3;
+    background-color: wheat;
+}
+.beenFound{
+    position: absolute;
+    width: 500px;
+    height: 200px;
+    top: 40%;
+    left: 36%;
+    z-index: 5;
+    border:  10px solid black;
+    background-color:  white;
+    border-radius: 20%;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 200px;
+    font-size: xx-large;
+    background-image: repeating-conic-gradient(at 35% 45%, rgb(201, 245, 119) 10%, rgb(24, 202, 233) 20%, rgb(247, 118, 214)30%);
+}
+.none{
+    visibility: hidden !important;
+}

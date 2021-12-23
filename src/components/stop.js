@@ -6,6 +6,7 @@ import styles from "./item.css"
 const Stopwatch = () => {
     const [time, setTime] = useState(0);
     const [running, setRunning] = useState(false);
+    const ref = React.createRef
     useEffect(() => {
       let interval;
       if (running) {
@@ -23,7 +24,7 @@ const Stopwatch = () => {
       console.log('stop.js' + check)
     ]
     return (
-      <div id="stopwatch"className={styles.stopwatch}>
+      <div id="stopwatch"className={styles.stopwatch} ref={ref} id={running ? "ClockRunning" : "ClockNotRunning"}>
           <div className={running ? "buttonsOn" : "buttonsOff"}>
           <button onClick={() => setRunning(true)}>Start</button>
           <button onClick={() => setRunning(false)}>Stop</button>
