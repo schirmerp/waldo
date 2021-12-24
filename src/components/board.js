@@ -19,9 +19,14 @@ import FoundInfo from "./found";
 export default function Board(){
     const [key, setKey] = useState(0)
     const [found, setFound] = useState(0)
+    const [gameOver, setGameOver] = useState(false)
     const check = document.getElementById('stopwatch')
     
-
+    useEffect(()=>{
+        if(found === 9){
+            setGameOver(true)
+        }
+    })
     function handleClick(e){
         
         if(e.target.offsetParent.id === 'notFound'){
@@ -29,6 +34,7 @@ export default function Board(){
             setFound(found => found + 1)
         }if(found === 9){
             console.log('STOP THE GAME STOPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP')
+
         }
         if(e.target.offsetParent.id === 'yesFound'){
             console.log(e.target.offsetParent)
@@ -41,6 +47,10 @@ export default function Board(){
     
     return(
         <div className="board-div">
+            <div className={styles.scoreboard}>
+                Score
+                <div className={styles.score}>{found}</div>
+            </div>
             <Item className={style.board} src={group}/>
             <Item className={styles.rick} src={rick} onClick={handleClick} alt={"Rick"}/>
             <Item className={styles.ballon} src={ballon} onClick={handleClick} alt={"Ballon"}/>
@@ -54,6 +64,10 @@ export default function Board(){
             <Expire delay="5000" key={key}>
                 <FoundInfo className={(key === 0) ? styles.none : styles.beenFound} info="You already found this shit!!!!" size="col-md-10" />
             </Expire>
+            <div className={!gameOver ? styles.notOver : styles.gameOver}>
+                Congratulations! You have found them all!
+                <button className={styles.button} onClick={() => window.location.reload(false)}>Click to restart!</button>
+            </div>
         </div>
     )
 }

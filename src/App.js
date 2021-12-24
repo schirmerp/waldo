@@ -16,12 +16,15 @@ function App(){
     const check = document.getElementsByClassName('stFwDofkgRwKTCBMWRnU')
     //console.log(Board().props)
     console.log(check)
-    
+    function handleClick(e){
+        console.log(e.target.parentElement.parentElement)
+        
+    }
     
     
     
     return(
-        <div className='App'>
+        <div className='App' onClick={handleClick}>
             <Board/>
             <Stopwatch/>
         </div>
