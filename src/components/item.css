@@ -20,6 +20,7 @@
     background-image: repeating-conic-gradient(rgb(255, 148, 148) 10%, rgb(248, 248, 144) 20%);
     vertical-align: middle;
     line-height: 100px;
+    z-index: 3;
 }
 
 #no > img{
@@ -38,10 +39,14 @@
     position: absolute;
     top: 0;
     left: 20px; 
+    
 
 }
-.numbers{
+.numbers > *{
     background-color: rgb(233, 243, 223);
+    height: 100px;
+    width: 200px;
+    overflow: visible;
 }
 .board > img{
     filter: none !important;

@@ -11,7 +11,7 @@ import morty from "/src/images/waldo_img/morty.png"
 import pencil from "/src/images/waldo_img/pencil.png"
 import summer from "/src/images/waldo_img/summer.png"
 import tinycowboy from "/src/images/waldo_img/tinycowboy.png"
-import style from "/src//components/item.css"
+import style from "/src/components/item.css"
 import Expire from "./expire";
 import FoundInfo from "./found";
 
@@ -20,11 +20,16 @@ export default function Board(){
     const [key, setKey] = useState(0)
     const [found, setFound] = useState(0)
     const [gameOver, setGameOver] = useState(false)
+    const [finalTime, setFinalTime] = useState(undefined)
     const check = document.getElementById('stopwatch')
     
     useEffect(()=>{
         if(found === 9){
             setGameOver(true)
+            //console.log(document.getElementById('clock').innerHTML)
+            setFinalTime(String(document.getElementById('minute').innerHTML + document.getElementById('second').innerHTML + document.getElementById('milli').innerHTML))
+            console.log(finalTime)
+            
         }
     })
     function handleClick(e){
@@ -40,7 +45,12 @@ export default function Board(){
             console.log(e.target.offsetParent)
             setKey(key => key + 1)
         }
-        console.log(found)
+        console.log(String(document.getElementById('minute').innerHTML + document.getElementById('second').innerHTML + document.getElementById('milli').innerHTML))
+        
+    }
+    
+    function reclick(){
+        window.location.reload()
         
     }
     
@@ -49,7 +59,7 @@ export default function Board(){
         <div className="board-div">
             <div className={styles.scoreboard}>
                 Score
-                <div className={styles.score}>{found}</div>
+                <div data-info={found}className={styles.score}>{found}</div>
             </div>
             <Item className={style.board} src={group}/>
             <Item className={styles.rick} src={rick} onClick={handleClick} alt={"Rick"}/>
@@ -65,8 +75,9 @@ export default function Board(){
                 <FoundInfo className={(key === 0) ? styles.none : styles.beenFound} info="You already found this shit!!!!" size="col-md-10" />
             </Expire>
             <div className={!gameOver ? styles.notOver : styles.gameOver}>
-                Congratulations! You have found them all!
-                <button className={styles.button} onClick={() => window.location.reload(false)}>Click to restart!</button>
+                Congratulations! You have found them all! <br/>
+                {finalTime}
+                <button className={styles.button} onClick={reclick}>Click to restart!</button>
             </div>
         </div>
     )

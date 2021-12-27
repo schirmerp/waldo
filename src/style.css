@@ -46,11 +46,7 @@
     top: 846px;
     left: 1331px;
 }
-.stopwatch{
-    position: absolute;
-    top: 0;
-    left: 50%;
-}
+
 .tinycowboy > * {
     left: -520px !important;
 }
@@ -132,4 +128,5 @@
     position: relative;
     height: 35px;
     width: auto;
+    z-index: 5;
 }
